@@ -1,21 +1,42 @@
+// import {sum} from "./01";
+//
+// test('sum should be correct', () => {
+//     //data
+//     const a = 1;
+//     const b = 2;
+//     const c = 3;
+//
+//     //action
+//     const result = sum(a, b);
+//
+//     //expect result
+//     expect(result).toBe(3);
+// })
+
+
 import {mult, splitIntoWords, sum} from "./01";
 
 //data
-const a = 1;
-const b = 2;
-const c = 3;
+let a: number;
+let b: number;
+let c: number;
 
-
+beforeEach(()=>{
+    a = 1;
+    b = 2;
+    c = 3;
+})
 
 test('sum should be correct', () => {
 
     //action
     const result1 = sum(a, b);
+    b=100
     const result2 = sum(b, c);
 
     //expect result
     expect(result1).toBe(3);
-    expect(result2).toBe(5);
+    expect(result2).toBe(103);
 })
 
 
@@ -29,8 +50,6 @@ test('multiply should be correct', () => {
     expect(result1).toBe(2);
     expect(result2).toBe(6);
 })
-
-
 
 
 test('splitting into words should be correct', () => {
